@@ -214,3 +214,29 @@ Conferido pelo autor no navegador, medindo a distância entre os cantos do texto
 | 1280 px | 41 px | 15 px (em duas linhas) | nenhuma |
 
 Esse ajuste não passou por revisão de subagente.
+
+## 7. Página publicada — 15/11/2026
+
+Repositório: `https://github.com/gecbeltrao/landing-ravena` (branch `main`, commit `d3d38ac`). Deploy: `https://landing-ravena.vercel.app`.
+
+Conferido pelo autor no endereço publicado, no navegador embutido (Chromium), digitando e clicando na página:
+
+| Item | O que foi feito e visto | Resultado |
+|---|---|---|
+| Página abre | Título correto, seções 01 a 11, fonte Archivo carregada. Recursos carregados: só `fonts/archivo-latin.woff2`, `styles.css` e `script.js`, do próprio domínio | passa |
+| `brief.md` | `https://landing-ravena.vercel.app/brief.md` responde 404: o brief não foi publicado | passa |
+| Cookies | `document.cookie` vazio | passa |
+| R$ 449 | Digitado 449, Enter: recusa, sem estimativa, sem etapa 2 | passa |
+| R$ 450 | R$ 45 a R$ 113; economia de R$ 337 a R$ 405 por mês | passa |
+| R$ 780 | R$ 78 a R$ 195; R$ 585 a R$ 702 por mês; R$ 7.020 a R$ 8.424 por ano | passa |
+| R$ 783 | R$ 79 a R$ 196 | passa |
+| Formulário inválido | Etapa 2 vazia, clique em enviar: três erros, foco em Nome, nada aberto | passa |
+| Envio | Teste, (15) 98888-7777, Salto, conta de R$ 780, um clique: `https://wa.me/5515990000000` com nome, WhatsApp, cidade, valor e estimativa na mensagem; confirmação na tela. A abertura foi interceptada, nenhuma mensagem enviada | passa |
+| Larguras | 375 px: `scrollWidth` 375. 1280 px: `scrollWidth` = `clientWidth` = 1265 | passa |
+| Vercel Web Analytics | `/_vercel/insights/script.js` responde **404** no endereço publicado | **não funciona ainda** |
+
+### Pendências depois do deploy
+
+- **Web Analytics desligado.** O script de medição não existe no deploy, sinal de que o Web Analytics não foi ativado no projeto da Vercel. Depois de ativar no painel, é preciso um novo deploy para o script passar a ser servido. Até lá a página funciona, mas não conta acessos e registra um erro 404 no console.
+- **Evento personalizado do clique no WhatsApp:** segue aberto (spec, seção 9), depende do plano.
+- Continuam sem verificação: Safari, Firefox e Edge; celular de verdade; abertura real do WhatsApp; leitor de tela; movimento reduzido.
