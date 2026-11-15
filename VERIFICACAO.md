@@ -285,3 +285,16 @@ Com isso, o critério de aceite de navegadores está coberto: Chromium (autor e 
 Sobre o evento: como a página envia e a Vercel aceita, a hipótese mais provável é que o plano em uso não exiba eventos personalizados. Isso não foi confirmado no painel. O item segue aberto na seção 9 da spec, agora com esse achado.
 
 Continua sem verificação: leitor de tela.
+
+### Leitor de tela e evento do WhatsApp — 15/11/2026
+
+| Item | Relato do responsável | Situação |
+|---|---|---|
+| Leitor de tela | Testado pelo responsável na página publicada: "deu certo" | verificado pelo responsável |
+| Evento "Enviar pelo WhatsApp" no painel | O plano da Vercel em uso não exibe eventos personalizados | limitação do plano, confirmada pelo responsável |
+
+O item aberto da seção 9 da spec foi fechado com esse resultado. A página continua enviando o evento, que a Vercel aceita; ele só não é exibido neste plano.
+
+### Situação da verificação
+
+Não resta item sem verificação entre os listados neste arquivo. Verificado pelo autor e por subagentes: simulação, validação, endereço e mensagem do WhatsApp, larguras, teclado, textos, design e deploy. Verificado pelo responsável: celular, Edge, Opera, Firefox, Safari, movimento reduzido, zoom de 200%, leitor de tela e contagem de acessos. Não se aplica: abertura da conversa no WhatsApp, por o número ser fictício.
