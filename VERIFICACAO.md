@@ -240,3 +240,13 @@ Conferido pelo autor no endereço publicado, no navegador embutido (Chromium), d
 - **Web Analytics desligado.** O script de medição não existe no deploy, sinal de que o Web Analytics não foi ativado no projeto da Vercel. Depois de ativar no painel, é preciso um novo deploy para o script passar a ser servido. Até lá a página funciona, mas não conta acessos e registra um erro 404 no console.
 - **Evento personalizado do clique no WhatsApp:** segue aberto (spec, seção 9), depende do plano.
 - Continuam sem verificação: Safari, Firefox e Edge; celular de verdade; abertura real do WhatsApp; leitor de tela; movimento reduzido.
+
+### Web Analytics ativado — 15/11/2026
+
+O responsável ativou o Web Analytics no painel da Vercel e refez o deploy. Conferido pelo autor em `https://landing-ravena.vercel.app`, no navegador embutido:
+
+- `/_vercel/insights/script.js` responde 200 (antes, 404).
+- Ao abrir a página, sai um `POST /_vercel/insights/view` com resposta 200: o acesso é registrado.
+- `document.cookie` continua vazio, e todos os recursos vêm do próprio domínio.
+
+Não conferido: o acesso aparecendo no painel da Vercel (só o responsável vê) e o evento personalizado do clique no WhatsApp, que segue aberto na spec.
