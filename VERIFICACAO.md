@@ -250,3 +250,38 @@ O responsável ativou o Web Analytics no painel da Vercel e refez o deploy. Conf
 - `document.cookie` continua vazio, e todos os recursos vêm do próprio domínio.
 
 Não conferido: o acesso aparecendo no painel da Vercel (só o responsável vê) e o evento personalizado do clique no WhatsApp, que segue aberto na spec.
+
+## 8. Testes do responsável na página publicada — 15/11/2026
+
+Feitos pelo responsável em `https://landing-ravena.vercel.app` e relatados por ele. O autor não repetiu estes testes.
+
+| Item | Relato do responsável | Situação |
+|---|---|---|
+| Celular de verdade | "Tudo certo pelo celular, nada quebrado." Aparelho e navegador não informados | verificado pelo responsável |
+| Outros navegadores | Edge e Opera: "tudo certo" | verificado pelo responsável |
+| Movimento reduzido | Testado com a preferência de movimento reduzido ligada, sem problema relatado | verificado pelo responsável |
+| Contagem de acessos | Captura do painel da Vercel (Web Analytics, últimos 7 dias): 3 visitantes, 114 visualizações de página, 3 online | verificado pelo responsável |
+
+### Continua sem verificação
+
+- **Safari e Firefox.** O critério de aceite da spec cita Chrome, Safari, Firefox e Edge; Edge foi testado pelo responsável, e Chromium pelo autor e pelos subagentes.
+- **Conversa aberta no WhatsApp:** não se aplica a esta entrega. O número (15) 99000-0000 é fictício, como toda a empresa, então a conversa não tem como abrir. O que a página controla foi conferido: o endereço `wa.me/5515990000000` e a mensagem completa (seções 3, 5 e 7). Com um número real, basta trocar a constante `WHATSAPP_EMPRESA` no `script.js` e os contatos do rodapé.
+- **Evento personalizado "Enviar pelo WhatsApp":** a captura mostra visitantes e visualizações, não a lista de eventos. O item da spec (seção 9) segue aberto.
+- **Leitor de tela** e zoom real de 200%.
+
+Observação: 114 visualizações para 3 visitantes é um número alto. Pode ser efeito dos testes repetidos e das recargas de página durante a verificação; vale olhar de novo depois de alguns dias de uso normal.
+
+### Mais testes do responsável e o evento do WhatsApp — 15/11/2026
+
+| Item | O que foi feito e visto | Situação |
+|---|---|---|
+| Firefox e Safari | Testados pelo responsável: "deu certo" | verificado pelo responsável |
+| Zoom de 200% | Testado pelo responsável: "deu tudo certo" | verificado pelo responsável |
+| Evento "Enviar pelo WhatsApp": envio | Conferido pelo autor no endereço publicado: depois de um envio de teste (abertura interceptada), a página fez `POST /_vercel/insights/event` e recebeu 200 | a página envia o evento |
+| Evento "Enviar pelo WhatsApp": painel | O responsável relatou que o clique não aparece no painel da Vercel | não aparece; causa não confirmada |
+
+Com isso, o critério de aceite de navegadores está coberto: Chromium (autor e subagentes), Edge, Opera, Firefox e Safari (responsável).
+
+Sobre o evento: como a página envia e a Vercel aceita, a hipótese mais provável é que o plano em uso não exiba eventos personalizados. Isso não foi confirmado no painel. O item segue aberto na seção 9 da spec, agora com esse achado.
+
+Continua sem verificação: leitor de tela.

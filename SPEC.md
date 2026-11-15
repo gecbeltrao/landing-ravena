@@ -131,7 +131,7 @@ O brief cita 40 fotos de obra e três depoimentos em vídeo, mas a pasta `materi
 - Acessível: campos com rótulo, uso por teclado, contraste adequado.
 - SEO local: energia solar residencial e as quatro cidades no título e na descrição.
 - **Hospedagem (decidido):** repositório público no GitHub com deploy na Vercel. Site estático, com `index.html` na raiz, sem configuração de build.
-- **Medição (decidido):** Vercel Web Analytics, que conta acessos. Cliques no botão que abre o WhatsApp só são contados com evento personalizado, que depende do plano da Vercel. **[ABERTO]** Conferir se o plano usado permite.
+- **Medição (decidido):** Vercel Web Analytics, que conta acessos. Cliques no botão que abre o WhatsApp só são contados com evento personalizado, que depende do plano da Vercel. **[ABERTO]** Conferido em 15/11/2026: a página envia o evento "Enviar pelo WhatsApp" e a Vercel o aceita (resposta 200), mas o responsável não o viu no painel. Falta confirmar no painel se o plano em uso exibe eventos personalizados.
 
 ## 10. Entrega
 
